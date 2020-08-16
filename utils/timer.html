@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="spectre.min.css">
+    <title>Timer</title>
+</head>
+
+<body>
+    <div class="container" style="padding: 40px 40px 40px 40px">
+        <div class="columns flex-centered">
+            <div class="column col-auto">
+                <div class="form-group">
+                    <input class="form-input" type="text" id="input" placeholder="A CF #122 *" onkeyup="change()">
+                </div>
+            </div>
+
+            <div class="column col-12 flex-centered">
+                <span id="nameView" style="opacity: 0.70">[ CF # 122 A, CF # 122 B, ... ]</span>
+            </div>
+
+            <div class="column col-12" style="padding:1em 1em 1em 1em"></div>
+
+            <div class="column col-12 flex-centered">
+                <h6 style="opacity: 0.6">Total Time</h6>
+            </div>
+            <div class="column col-12 flex-centered">
+                <h3><span id="totalTime">00:00:00</span></h3>
+            </div>
+
+            <div class="column col-12" style="padding:1em 1em 1em 1em"></div>
+
+            <div class="column col-12 flex-centered">
+                <h6 style="opacity: 0.6">Current Time</h6>
+            </div>
+            <div class="column col-12 flex-centered">
+                <h3><span id="currentTime">00:00:00</span></h3>
+            </div>
+
+            <div class="column col-12" style="padding:1em 1em 1em 1em"></div>
+            <div class="column col-12 flex-centered">
+                <table class="table table-striped table-hover" style="text-align: center">
+                    <thead>
+                        <tr>
+                            <td>Question</td>
+                            <td>Start</td>
+                            <td>End</td>
+                            <td>Total Time</td>
+                        </tr>
+                    </thead>
+                </table>
+            </div>
+            <div class="column col-12 flex-centered" style="margin:1em 1em 1em 1em">
+                <button class="btn btn-primary" onclick="lbutton()" id="sButton"><span>Start</span></button>
+                <div style="padding-right: 1em"></div>
+                <button class="btn btn-primary" onclick="rbutton()" id="eButton" style="display:none">End</button>
+            </div>
+        </div>
+    </div>
+    <script src="csv_export.js"></script>
+    <script src="timer.js"></script>
+</body>
+
+</html>
